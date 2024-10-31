@@ -1,0 +1,17 @@
+{
+  "id": "4",
+  "image": "https://bafybeig7ihogpbz4tadk7j3pxptorygybwvoujl5m7oyjakpskecax43xy.ipfs.w3s.link/artefact1.jpeg",
+  "token_id": "2",
+  "name": "Artefact 4",
+  "description": "This NFT represents an Artefact on Afriarts",
+  "attributes": [
+    {
+      "trait_type": "Artefact",
+      "value": "Basic"
+    },
+    {
+      "trait_type": "Ammo",
+      "value": "1"
+    }
+  ]
+}

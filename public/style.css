@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* HELPERS */
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0 5rem;
+}
+
+.help-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 3.4rem;
+  line-height: 4.114rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #000;
+}
+/* //////////////////////////// */
+
+.header {
+  height: 6.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding: 0 5rem;
+}
+
+.header-img-box {
+  max-width: 23.3rem;
+}
+
+.afriart-logo {
+  height: 6.6rem;
+  /* width: 100%; */
+}
+
+.header-search-and-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3rem;
+  position: relative;
+  max-width: 78.1rem;
+}
+
+.search-bar {
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  padding: 1rem 1rem 1rem 4rem;
+  width: 43rem;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.search-bar:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.link {
+  cursor: pointer;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  line-height: 2.663rem;
+}
+
+.link:last-child::after {
+  content: "New";
+  font-size: 1.2rem;
+  margin-left: 0.8rem;
+  background: linear-gradient(180deg, #1bf423 0%, #f1fc18 100%);
+  border-radius: 20px;
+  padding: 1rem;
+  color: #fff;
+}
+
+.header-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3rem;
+  max-width: 25.7rem;
+}
+
+.cta-btn {
+  font-size: 2.2rem;
+  line-height: 2.663rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #0442cb;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-transform: capitalize;
+}
+
+/* ////////////////////////////////////// */
+
+.heading-primary-box {
+  display: flex;
+  justify-content: center;
+}
+.hero-heading {
+  font-family: "Instrument Serif", sans-serif;
+  font-size: 10rem;
+  line-height: 13rem;
+  text-align: center;
+  font-weight: 400;
+  max-width: 90rem;
+  margin-bottom: 4rem;
+}
+
+.info {
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 7.261rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 11.4rem 0;
+}
+
+.info-text {
+  max-width: 123.6rem;
+}
+.hero-pri-img {
+  width: 100%;
+}
+
+.hero {
+  max-width: 144rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0 5rem;
+  position: relative;
+  margin-bottom: 6.3rem;
+}
+
+.latest-listings {
+  background-color: #f5f5f5;
+  border-radius: 2rem;
+  position: relative;
+  height: 57.4rem;
+  overflow-x: hidden;
+}
+
+.listing {
+  display: grid;
+  column-gap: 11.6rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 6.3rem 0 6.3rem 3.2rem;
+  position: absolute;
+  top: 0;
+  background-color: #f5f5f5;
+  transition: transform 1s;
+}
+
+.listing-img-box {
+  max-width: 67.8rem;
+  border-radius: 3rem;
+  background-color: #83b9c3;
+}
+.listing-img {
+  width: 100%;
+}
+
+.listing-feature-box {
+  width: 48.9rem;
+}
+
+.listing-status {
+  display: flex;
+
+  align-items: center;
+}
+
+.listing-status-text {
+  font-size: 2.4rem;
+  line-height: 2.905rem;
+}
+
+.listing-name {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 6.051rem;
+  margin-bottom: 2.1rem;
+}
+
+.blockchain-support-text {
+  font-size: 2.4rem;
+  line-height: 2.905rem;
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.verified-creator {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.listing-description {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 2.1rem;
+}
+
+.purchase-nft {
+  margin-bottom: 1.8rem;
+}
+
+.copies-collected {
+  font-size: 2rem;
+  line-height: 2.42rem;
+  margin-bottom: 2.6rem;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  cursor: pointer;
+  /* transform: translateX(50%); */
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
+
+/*///////////// DROPS ///////////// */
+
+.drops {
+  max-width: 144rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0 5rem;
+}
+
+.drop-heading {
+  font-weight: 500;
+  font-size: 7rem;
+  line-height: 8.472rem;
+  margin-bottom: 4rem;
+}
+
+.droplistings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem 2rem;
+}
+
+.droplisting {
+  border-radius: 2rem;
+  border: 1px solid #80808080;
+  position: relative;
+}
+
+.droplisting::after {
+  content: "preserve";
+  position: absolute;
+  bottom: 0;
+  background-color: #0442cb;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.drop-img-box {
+  padding: 1.9rem 2.1rem 3.1rem 2.1rem;
+}
+
+.drop-img {
+  width: 100%;
+}
+
+.drop-feature-box {
+  margin: 0 2.1rem 1.9rem 2.1rem;
+}
+
+.art-name {
+  font-size: 3.4rem;
+  line-height: 4.115rem;
+  font-weight: 500;
+}
+
+.drop-sales {
+  background-color: #f5f5f5;
+  padding: 1.65rem 1.3rem;
+  display: flex;
+  gap: 6.7rem;
+  margin-top: 2.6rem;
+}
+
+.price-heading,
+.sales-heading {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.905rem;
+  color: #808080;
+  margin-bottom: 0.6rem;
+}
+
+.price,
+.sales- {
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 3.147rem;
+}
+
+.view-drops {
+}
