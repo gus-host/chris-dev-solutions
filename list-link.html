@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfriArts | Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/general.css" />
+    <link rel="stylesheet" href="./public/style.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-img-box">
+        <img
+          class="afriart-logo"
+          src="./public/img/afriart-logo.png"
+          alt="Afri Art logo"
+        />
+      </div>
+      <div class="header-search-and-links">
+        <input
+          class="search-bar"
+          type="text"
+          placeholder="Search for Creators, Arts or users"
+        />
+        <ul class="links">
+          <li class="link"><a href="#"></a>create</li>
+          <li class="link"><a href="#"></a>explore</li>
+          <li class="link"><a href="#"></a>profile</li>
+          <li class="link"><a href="#"></a>drops</li>
+        </ul>
+        <img
+          class="search-icon"
+          src="./public/img/guidance_search.png"
+          alt="search-icon"
+        />
+      </div>
+      <div class="header-cta">
+        <button id="open-connect-modal" class="px-5 py-1 rounded bg-slate-200">wallet details</button>
+        <img
+          class="class-logo"
+          src="./public/img/shopping-cart-logo.png"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <section class="mt-5">
+        <div class="grid grid-cols-5 text-3xl mx-96">
+            <div class="">
+                <div>Apply for listing</div>
+                <div class="mt-5 grid gap-3 ps-3">
+                    <div>Introduction</div>
+                    <div>Collection</div>
+                    <div>Details</div>
+                    <div class="text-slate-400">Hash list</div>
+                    <div class="text-slate-400">Submit</div>
+                </div>
+            </div>
+
+            <div class="col-span-4 grid gap-14 border-l-2 px-20">
+                <div class="text-5xl">Categories</div>
+                <div>Enter in the details on your art that will be used for your marketplace page on Afri Arts</div>  
+                
+                <div class="text-5xl">Socail links</div>
+                <div>Input your social and website links for your art. These links will be displayed on your art page</div>
+
+                <div class="w-full">
+                    <label for="x">Link Twitter (X)</label>
+                    <input type="text" id="x" class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-3xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5" placeholder="Enter your Twitter (X) username"/>
+                </div>
+
+                <div class="w-full">
+                    <label for="artsymbol">Website URL</label>
+                    <input type="text" id="artsymbol" class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-3xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5" placeholder="www.website.link"/>
+                </div>
+
+                <button class="w-full bg-blue-500 text-white border border-gray-300 text-gray-900 text-3xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5">
+                    Save and proceed
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer container">
+      <ul class="footer-links">
+        <li class="footer-link"><a href="">Marketplace</a></li>
+        <li class="footer-link"><a href="">Explore</a></li>
+        <li class="footer-link"><a href="">Create</a></li>
+        <li class="footer-link"><a href="">Github</a></li>
+        <li class="footer-link"><a href="">Marketplace</a></li>
+        <li class="footer-link"><a href="">Contact</a></li>
+      </ul>
+      <ul class="other-links">
+        <img
+          src="./public/img/thankyou.png"
+          alt="thank you"
+          class="thank-you-img"
+        />
+        <ul class="footer-other-links">
+          <li class="footer-other-link"><a href="">Index</a></li>
+          <li class="footer-other-link"><a href="">Impressium</a></li>
+          <li class="footer-other-link"><a href="">Privacy</a></li>
+          <li class="footer-other-link"><a href="">All rights reserved</a></li>
+        </ul>
+      </ul>
+    </footer>
+  </body>
+</html>
