@@ -179,6 +179,10 @@ openConnectModalBtn.addEventListener("click", function () {
 
 modal.getEvent(); // get last event
 modal.subscribeEvents((event) => {
+  if (event.data.event === "CONNECT_SUCCESS") {
+    window.location.href = "./public/arts/index.html";
+    console.log("wallet connected");
+  }
   console.log(event.data.event);
 });
 
