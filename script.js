@@ -137,7 +137,7 @@ const projectId = "f769e00b28ac56af603b09c4a7d13389";
 const metadata = {
   name: "AppKit",
   description: "AppKit Example",
-  url: "http://localhost:5173/", // origin must match your domain & subdomain
+  url: "https://afriarts.netlify.app/", // origin must match your domain & subdomain
   icons: ["https://avatars.githubusercontent.com/u/179229932"],
 };
 
@@ -163,20 +163,6 @@ droplistings.forEach((drop, i) => {
   });
 });
 
-preserveBtns.forEach((prBtn, i) => {
-  prBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (modal.getAddress() === null) {
-      console.log("connect wallet first");
-      modal.open();
-    }
-    if (modal.getAddress) {
-      window.location.href = "./arts.html";
-    }
-    console.log(modal.getAddress(), modal.getIsConnectedState());
-  });
-});
-
 console.log(modal);
 
 // Trigger modal programaticaly
@@ -196,6 +182,22 @@ modal.subscribeEvents((event) => {
   }
 
   console.log(event.data.event);
+});
+
+preserveBtns.forEach((prBtn, i) => {
+  prBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(modal.getAddress());
+    if (modal.getAddress() === null) {
+      console.log("connect wallet first");
+      alert("Connect your wallet first");
+      modal.open();
+    }
+    if (modal.getAddress) {
+      window.location.href = "./arts.html";
+    }
+    console.log(modal.getAddress(), modal.getIsConnectedState());
+  });
 });
 
 // openNetworkModalBtn.addEventListener('click', () => modal.open({ view: 'Networks' }))
