@@ -7,7 +7,7 @@ const droplistings = document.querySelectorAll(".droplisting");
 const preserveBtns = document.querySelectorAll(".preserve-btn");
 const headerImgBox = document.querySelector(".header-img-box");
 headerImgBox.addEventListener("click", () => {
-  window.location.href = "./index.html";
+  window.location.href = "./";
 });
 
 // Slider
@@ -171,7 +171,7 @@ preserveBtns.forEach((prBtn, i) => {
       modal.open();
     }
     if (modal.getAddress) {
-      window.location.href = "./public/arts/index.html";
+      window.location.href = "./arts.html";
     }
     console.log(modal.getAddress(), modal.getIsConnectedState());
   });
@@ -191,7 +191,7 @@ openConnectModalBtn.addEventListener("click", function () {
 modal.getEvent(); // get last event
 modal.subscribeEvents((event) => {
   if (event.data.event === "CONNECT_SUCCESS") {
-    window.location.href = "./public/arts/index.html";
+    window.location.href = "./arts.html";
     console.log("wallet connected");
   }
 
