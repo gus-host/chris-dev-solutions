@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./public/general.css" />
     <link rel="stylesheet" href="./public/style.css" />
     <script type="module" src="./script.js"></script>
   </head>
@@ -44,7 +45,7 @@
         />
       </div>
       <div class="header-cta">
-        <button class="cta-btn">connect wallet</button>
+        <button id="open-connect-modal" class="cta-btn">connect wallet</button>
         <img
           class="class-logo"
           src="./public/img/shopping-cart-logo.png"
@@ -227,6 +228,82 @@
       <img src="./public/img/next-btn.png" alt="next button" class="next-btn" />
       <div class="dots"></div>
     </section>
+    <section class="blog">
+      <div class="blog-section-header">
+        <div class="blog-img-box">
+          <img src="./public/img/AfriArt Blog.png" alt="" class="blog-img" />
+          <ul class="blog-links">
+            <li class="blog-link"><a href="">All</a></li>
+            <li class="blog-link"><a href="">Forum</a></li>
+          </ul>
+        </div>
+        <a class="view-post" href="">View all posts &rarr;</a>
+      </div>
+      <div class="blog-container">
+        <div class="forum">
+          <img src="./public/img/forum-img.png" alt="" class="forum-img" />
+          <p class="forum-title">Forum</p>
+          <p class="forumdescip">
+            From Lost Treasures to Restored Masterpieces: The Journey of African
+            Artifacts
+          </p>
+        </div>
+        <div class="blogs">
+          <div class="blog-comp blog--1">
+            <div class="blog-text-box">
+              <p class="blog-list-title">Forum</p>
+              <p class="blog-list-desc">The Global Journey of African Art</p>
+            </div>
+            <div class="blog-list-image-box">
+              <img
+                src="./public/img/blog-list-img-1.png"
+                alt="blog-img"
+                class="block-list-img"
+              />
+            </div>
+          </div>
+          <div class="blog-comp blog--2">
+            <div class="blog-text-box">
+              <p class="blog-list-title">Forum</p>
+              <p class="blog-list-desc">Ongoing Repatriation Efforts</p>
+            </div>
+            <div class="blog-list-image-box">
+              <img
+                src="./public/img/blog-list-img-2.png"
+                alt="blog-img"
+                class="block-list-img"
+              />
+            </div>
+          </div>
+          <div class="blog-comp blog--3">
+            <div class="blog-text-box">
+              <p class="blog-list-title">Forum</p>
+              <p class="blog-list-desc">The Global Journey of African Art</p>
+            </div>
+            <div class="blog-list-image-box">
+              <img
+                src="./public/img/blog-list-img-3.png"
+                alt="blog-img"
+                class="block-list-img"
+              />
+            </div>
+          </div>
+          <div class="blog-comp blog--4">
+            <div class="blog-text-box">
+              <p class="blog-list-title">Forum</p>
+              <p class="blog-list-desc">The Global Journey of African Art</p>
+            </div>
+            <div class="blog-list-image-box">
+              <img
+                src="./public/img/blog-list-img-4.png"
+                alt="blog-img"
+                class="block-list-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="drops">
       <h2 class="drop-heading">Latest Drops</h2>
       <div class="droplistings">
@@ -255,6 +332,14 @@
                 <p class="sales-">0.003 ETH</p>
               </div>
             </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
           </div>
         </div>
         <div class="droplisting droplisting--2">
@@ -282,6 +367,14 @@
                 <p class="sales-">0.003 ETH</p>
               </div>
             </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
           </div>
         </div>
         <div class="droplisting droplisting--3">
@@ -309,6 +402,14 @@
                 <p class="sales-">0.003 ETH</p>
               </div>
             </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
           </div>
         </div>
         <div class="droplisting droplisting--1">
@@ -336,6 +437,14 @@
                 <p class="sales-">0.003 ETH</p>
               </div>
             </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
           </div>
         </div>
         <div class="droplisting droplisting--2">
@@ -363,6 +472,14 @@
                 <p class="sales-">0.003 ETH</p>
               </div>
             </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
           </div>
         </div>
         <div class="droplisting droplisting--3">
@@ -390,10 +507,45 @@
                 <p class="sales-">0.003 ETH</p>
               </div>
             </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
           </div>
         </div>
       </div>
-      <a href="#" class="view-drops help-btn">View drops</a>
+      <a href="#" class="view-drops help-btn">View drops &rarr;</a>
     </section>
+    <section class="trending container">
+      <img src="./public/img/trending.png" alt="" class="trending-img" />
+      <a href="#" class="view-drops help-btn">View all collections &rarr;</a>
+    </section>
+    <footer class="footer container">
+      <ul class="footer-links">
+        <li class="footer-link"><a href="">Marketplace</a></li>
+        <li class="footer-link"><a href="">Explore</a></li>
+        <li class="footer-link"><a href="">Create</a></li>
+        <li class="footer-link"><a href="">Github</a></li>
+        <li class="footer-link"><a href="">Marketplace</a></li>
+        <li class="footer-link"><a href="">Contact</a></li>
+      </ul>
+      <ul class="other-links">
+        <img
+          src="./public/img/thankyou.png"
+          alt="thank you"
+          class="thank-you-img"
+        />
+        <ul class="footer-other-links">
+          <li class="footer-other-link"><a href="">Index</a></li>
+          <li class="footer-other-link"><a href="">Impressium</a></li>
+          <li class="footer-other-link"><a href="">Privacy</a></li>
+          <li class="footer-other-link"><a href="">All rights reserved</a></li>
+        </ul>
+      </ul>
+    </footer>
   </body>
 </html>

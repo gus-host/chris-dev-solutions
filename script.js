@@ -1,6 +1,11 @@
 "use strict";
+import { createAppKit } from "@reown/appkit";
+import { EthersAdapter } from "@reown/appkit-adapter-ethers";
+import { mainnet, arbitrum } from "@reown/appkit/networks";
 
-console.log(document.querySelector(".header"));
+const droplistings = document.querySelectorAll(".droplisting");
+const preserveBtns = document.querySelectorAll(".preserve-btn");
+
 // Slider
 const sliderFunc = function () {
   // BUILDING A SLIDER COMPONENT - 1
@@ -11,6 +16,8 @@ const sliderFunc = function () {
   const btnLeft = document.querySelector(".slider__btn--left");
   const btnRight = document.querySelector(".next-btn");
   const dotContainer = document.querySelector(".dots");
+
+  console.log(droplistings);
 
   console.log(slides, btnRight);
 
@@ -80,3 +87,99 @@ const sliderFunc = function () {
   console.log(slides, btnRight);
 };
 sliderFunc();
+
+const droplisting = function () {
+  return ` <div class="droplisting droplisting--1">
+          <div class="drop-img-box">
+            <img
+              src="./public/img/drop-img--1.png"
+              alt=""
+              class="drop-img drop-img--1"
+            />
+          </div>
+          <div class="drop-feature-box">
+            <img
+              src="./public/img/verified-artist--1.png"
+              alt="Verified artist name"
+              class="verifiedartist verified-artist--1"
+            />
+            <p class="art-name">African LAMA</p>
+            <div class="drop-sales">
+              <div class="price-box">
+                <p class="price-heading">price</p>
+                <p class="price">0.0034 ETH</p>
+              </div>
+              <div class="sales-box">
+                <p class="sales-heading">Last Sales</p>
+                <p class="sales-">0.003 ETH</p>
+              </div>
+            </div>
+            <a href="" class="preserve-btn hidden"
+              ><p>Preserve</p>
+              <span class="shop-cart-cont"
+                ><img
+                  src="./public/img/btn-shopping-cart.png"
+                  alt="shopping-cart-icon"
+                  class="btn-shopping-cart" /></span
+            ></a>
+          </div>
+  `;
+};
+
+// 1. Get projectId from https://cloud.reown.com
+const projectId = "f769e00b28ac56af603b09c4a7d13389";
+
+// 2. Create your application's metadata object
+const metadata = {
+  name: "AppKit",
+  description: "AppKit Example",
+  url: "http://localhost:5173/", // origin must match your domain & subdomain
+  icons: ["https://avatars.githubusercontent.com/u/179229932"],
+};
+
+// 3. Create a AppKit instance
+const modal = createAppKit({
+  adapters: [new EthersAdapter()],
+  networks: [mainnet, arbitrum],
+  metadata,
+  projectId,
+  features: {
+    analytics: true, // Optional - defaults to your Cloud configuration
+  },
+});
+
+droplistings.forEach((drop, i) => {
+  drop.addEventListener("mouseenter", (e) => {
+    preserveBtns[i].classList.remove("hidden");
+  });
+});
+droplistings.forEach((drop, i) => {
+  drop.addEventListener("mouseleave", (e) => {
+    preserveBtns[i].classList.add("hidden");
+  });
+});
+
+preserveBtns.forEach((prBtn, i) => {
+  prBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(modal.getAddress(), modal.getIsConnectedState());
+  });
+});
+
+console.log(modal);
+
+// Trigger modal programaticaly
+// Add this code inside `main.js` file at the end of the code file
+const openConnectModalBtn = document.getElementById("open-connect-modal");
+
+// const openNetworkModalBtn = document.getElementById('open-network-modal')
+openConnectModalBtn.addEventListener("click", function () {
+  modal.open();
+});
+
+modal.getEvent(); // get last event
+modal.subscribeEvents((event) => {
+  console.log(event.data.event);
+});
+
+// openNetworkModalBtn.addEventListener('click', () => modal.open({ view: 'Networks' }))
