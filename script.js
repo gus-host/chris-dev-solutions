@@ -5,6 +5,10 @@ import { mainnet, arbitrum } from "@reown/appkit/networks";
 
 const droplistings = document.querySelectorAll(".droplisting");
 const preserveBtns = document.querySelectorAll(".preserve-btn");
+const headerImgBox = document.querySelector(".header-img-box");
+headerImgBox.addEventListener("click", () => {
+  window.location.href = "./index.html";
+});
 
 // Slider
 const sliderFunc = function () {
@@ -138,7 +142,7 @@ const metadata = {
 };
 
 // 3. Create a AppKit instance
-const modal = createAppKit({
+export const modal = createAppKit({
   adapters: [new EthersAdapter()],
   networks: [mainnet, arbitrum],
   metadata,
@@ -162,6 +166,13 @@ droplistings.forEach((drop, i) => {
 preserveBtns.forEach((prBtn, i) => {
   prBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    if (modal.getAddress() === null) {
+      console.log("connect wallet first");
+      modal.open();
+    }
+    if (modal.getAddress) {
+      window.location.href = "./public/arts/index.html";
+    }
     console.log(modal.getAddress(), modal.getIsConnectedState());
   });
 });
@@ -183,6 +194,7 @@ modal.subscribeEvents((event) => {
     window.location.href = "./public/arts/index.html";
     console.log("wallet connected");
   }
+
   console.log(event.data.event);
 });
 

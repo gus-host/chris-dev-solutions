@@ -55,6 +55,7 @@ html {
 
 .header-img-box {
   max-width: 23.3rem;
+  cursor: pointer;
 }
 
 .afriart-logo {
@@ -147,7 +148,7 @@ html {
 .footer {
   background-color: #0442cb;
   padding: 4.5rem 5rem;
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .footer-links,
